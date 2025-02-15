@@ -1,0 +1,186 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fredoka", serif;
+  line-height: 1.6;
+  color: #333;
+  background-image: url(Background.png);
+  background-size: cover;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background: rgba(255, 255, 255, 0.2); /* Transparan sederhana */
+  backdrop-filter: blur(5px); /* Blur latar belakang */
+  border-radius: 30px; /* Sudut sedikit melengkung */
+  border: 1px solid rgba(255, 255, 255, 0.484); /* Border tipis */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 52px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.contact-button {
+  background-color: #B1B2FF;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.contact-button:hover{
+  background-color: #F6A3C1;
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease-in-out;
+}
+
+/* Intro section */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
+
+  background: rgba(255, 255, 255, 0.2); /* Transparan sederhana */
+  backdrop-filter: blur(5px); /* Blur latar belakang */
+  border-radius: 30px; /* Sudut sedikit melengkung */
+  border: 1px solid rgba(255, 255, 255, 0.484); /* Border tipis */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
+  font-size: 48px;
+  margin-bottom: 20px
+}
+
+.intro-text p {
+  font-size: 18px;
+  color: #555;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 500px;
+  height: auto;
+  border: 25px solid #F6A3C1;
+  border-radius: 30px;
+}
+
+/* Footer */
+.footer-content {
+  text-align: center;
+  padding: 20px;
+  
+  background: rgba(255, 255, 255, 0.2); /* Transparan sederhana */
+  backdrop-filter: blur(5px); /* Blur latar belakang */
+  border-radius: 30px 30px 0 0; /* Melengkung hanya di atas */
+  border: 1px solid rgba(255, 255, 255, 0.484); /* Border tipis */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Bayangan */
+  margin: 0px 20px;
+}
+
+.footer-links {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.social-links {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .intro {
+      flex-direction: column;
+  }
+
+  .intro-text,
+  .intro-image {
+      flex: none;
+      margin-bottom: 20px;
+  }
+
+  .navbar ul{
+    gap: 20px;
+  }
+
+  .intro-image img{
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .intro-image img{
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  
+  .navbar ul li a {
+    font-size: 12px;
+  }
+
+  .navbar h1 {
+    font-size: 14px;
+  }
+
+  .navbar{
+    gap: 10px;
+  }
+
+}
